@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2B359AA1B3A1E2900E6D097 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359A91B3A1E2900E6D097 /* AppDelegate.m */; };
+		F2B359AC1B3A1E2900E6D097 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359AB1B3A1E2900E6D097 /* main.m */; };
+		F2B359AE1B3A1E2900E6D097 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B359AD1B3A1E2900E6D097 /* Images.xcassets */; };
+		F2B359B11B3A1E2900E6D097 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B359AF1B3A1E2900E6D097 /* MainMenu.xib */; };
+		F2B359BD1B3A1E2900E6D097 /* LuciferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359BC1B3A1E2900E6D097 /* LuciferTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2B359B71B3A1E2900E6D097 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2B3599B1B3A1E2800E6D097 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2B359A21B3A1E2800E6D097;
+			remoteInfo = Lucifer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F2B359A31B3A1E2900E6D097 /* Lucifer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lucifer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2B359A71B3A1E2900E6D097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2B359A81B3A1E2900E6D097 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F2B359A91B3A1E2900E6D097 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F2B359AB1B3A1E2900E6D097 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2B359AD1B3A1E2900E6D097 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F2B359B01B3A1E2900E6D097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F2B359B61B3A1E2900E6D097 /* LuciferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuciferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2B359BB1B3A1E2900E6D097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2B359BC1B3A1E2900E6D097 /* LuciferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LuciferTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2B359A01B3A1E2800E6D097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2B359B31B3A1E2900E6D097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2B3599A1B3A1E2800E6D097 = {
+			isa = PBXGroup;
+			children = (
+				F2B359A51B3A1E2900E6D097 /* Lucifer */,
+				F2B359B91B3A1E2900E6D097 /* LuciferTests */,
+				F2B359A41B3A1E2900E6D097 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2B359A41B3A1E2900E6D097 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2B359A31B3A1E2900E6D097 /* Lucifer.app */,
+				F2B359B61B3A1E2900E6D097 /* LuciferTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2B359A51B3A1E2900E6D097 /* Lucifer */ = {
+			isa = PBXGroup;
+			children = (
+				F2B359A81B3A1E2900E6D097 /* AppDelegate.h */,
+				F2B359A91B3A1E2900E6D097 /* AppDelegate.m */,
+				F2B359AD1B3A1E2900E6D097 /* Images.xcassets */,
+				F2B359AF1B3A1E2900E6D097 /* MainMenu.xib */,
+				F2B359A61B3A1E2900E6D097 /* Supporting Files */,
+			);
+			path = Lucifer;
+			sourceTree = "<group>";
+		};
+		F2B359A61B3A1E2900E6D097 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2B359A71B3A1E2900E6D097 /* Info.plist */,
+				F2B359AB1B3A1E2900E6D097 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2B359B91B3A1E2900E6D097 /* LuciferTests */ = {
+			isa = PBXGroup;
+			children = (
+				F2B359BC1B3A1E2900E6D097 /* LuciferTests.m */,
+				F2B359BA1B3A1E2900E6D097 /* Supporting Files */,
+			);
+			path = LuciferTests;
+			sourceTree = "<group>";
+		};
+		F2B359BA1B3A1E2900E6D097 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2B359BB1B3A1E2900E6D097 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2B359A21B3A1E2800E6D097 /* Lucifer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2B359C01B3A1E2900E6D097 /* Build configuration list for PBXNativeTarget "Lucifer" */;
+			buildPhases = (
+				F2B3599F1B3A1E2800E6D097 /* Sources */,
+				F2B359A01B3A1E2800E6D097 /* Frameworks */,
+				F2B359A11B3A1E2800E6D097 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lucifer;
+			productName = Lucifer;
+			productReference = F2B359A31B3A1E2900E6D097 /* Lucifer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2B359B51B3A1E2900E6D097 /* LuciferTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2B359C31B3A1E2900E6D097 /* Build configuration list for PBXNativeTarget "LuciferTests" */;
+			buildPhases = (
+				F2B359B21B3A1E2900E6D097 /* Sources */,
+				F2B359B31B3A1E2900E6D097 /* Frameworks */,
+				F2B359B41B3A1E2900E6D097 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2B359B81B3A1E2900E6D097 /* PBXTargetDependency */,
+			);
+			name = LuciferTests;
+			productName = LuciferTests;
+			productReference = F2B359B61B3A1E2900E6D097 /* LuciferTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2B3599B1B3A1E2800E6D097 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Shufflow;
+				TargetAttributes = {
+					F2B359A21B3A1E2800E6D097 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					F2B359B51B3A1E2900E6D097 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = F2B359A21B3A1E2800E6D097;
+					};
+				};
+			};
+			buildConfigurationList = F2B3599E1B3A1E2800E6D097 /* Build configuration list for PBXProject "Lucifer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2B3599A1B3A1E2800E6D097;
+			productRefGroup = F2B359A41B3A1E2900E6D097 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2B359A21B3A1E2800E6D097 /* Lucifer */,
+				F2B359B51B3A1E2900E6D097 /* LuciferTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2B359A11B3A1E2800E6D097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2B359AE1B3A1E2900E6D097 /* Images.xcassets in Resources */,
+				F2B359B11B3A1E2900E6D097 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2B359B41B3A1E2900E6D097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2B3599F1B3A1E2800E6D097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2B359AC1B3A1E2900E6D097 /* main.m in Sources */,
+				F2B359AA1B3A1E2900E6D097 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2B359B21B3A1E2900E6D097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2B359BD1B3A1E2900E6D097 /* LuciferTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2B359B81B3A1E2900E6D097 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2B359A21B3A1E2800E6D097 /* Lucifer */;
+			targetProxy = F2B359B71B3A1E2900E6D097 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F2B359AF1B3A1E2900E6D097 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2B359B01B3A1E2900E6D097 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2B359BE1B3A1E2900E6D097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F2B359BF1B3A1E2900E6D097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F2B359C11B3A1E2900E6D097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Lucifer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F2B359C21B3A1E2900E6D097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Lucifer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F2B359C41B3A1E2900E6D097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LuciferTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lucifer.app/Contents/MacOS/Lucifer";
+			};
+			name = Debug;
+		};
+		F2B359C51B3A1E2900E6D097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LuciferTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lucifer.app/Contents/MacOS/Lucifer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2B3599E1B3A1E2800E6D097 /* Build configuration list for PBXProject "Lucifer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2B359BE1B3A1E2900E6D097 /* Debug */,
+				F2B359BF1B3A1E2900E6D097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2B359C01B3A1E2900E6D097 /* Build configuration list for PBXNativeTarget "Lucifer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2B359C11B3A1E2900E6D097 /* Debug */,
+				F2B359C21B3A1E2900E6D097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F2B359C31B3A1E2900E6D097 /* Build configuration list for PBXNativeTarget "LuciferTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2B359C41B3A1E2900E6D097 /* Debug */,
+				F2B359C51B3A1E2900E6D097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2B3599B1B3A1E2800E6D097 /* Project object */;
+}
