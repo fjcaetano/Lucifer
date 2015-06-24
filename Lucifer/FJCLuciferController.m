@@ -15,6 +15,10 @@
 #import "FJCLEDMonitor.h"
 #import "KBLKeyboardBacklightService.h"
 
+// Keys
+static NSString *const kMonitorTypeUserDefaults = @"kMonitorTypeUserDefaults";
+static NSString *const kTimeOutUserDefaults = @"kTimeOutUserDefaults";
+
 
 static uint64_t const kLEDDimmingDuration = 1000;
 static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
@@ -22,8 +26,8 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 
 @interface FJCLuciferController ()
 
-@property (nonatomic, strong) id keyboardEventMonitor;
-@property (nonatomic, strong) id mouseEventMonitor;
+@property (nonatomic, weak) id keyboardEventMonitor;
+@property (nonatomic, weak) id mouseEventMonitor;
 
 @property (nonatomic, readwrite) BOOL isKeyboardLit;
 @property (nonatomic, readwrite) uint64_t keyboardLEDPreviousValue;
@@ -39,9 +43,11 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 {
     if (self = [super init])
     {
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        
         self.blackList = [NSMutableArray new];
-        self.timeOutToBlackout = kDefaultTimeoutToBlackout;
-        self.monitorType = FJCLuciferMonitorTypeKeyboard;
+        self.timeOutToBlackout = ([userDefaults doubleForKey:kTimeOutUserDefaults] ?: kDefaultTimeoutToBlackout);
+        self.monitorType = ([userDefaults integerForKey:kMonitorTypeUserDefaults] ?: FJCLuciferMonitorTypeKeyboard);
         
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(_didUpdateKBLValue:)
@@ -63,25 +69,52 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
     return sharedInstance;
 }
 
+#pragma mark - Properties
+
+- (void)setMonitorType:(FJCLuciferMonitorType)monitorType
+{
+    _monitorType = monitorType;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self _saveUserDefaults];
+    });
+}
+
+- (void)setTimeOutToBlackout:(NSTimeInterval)timeOutToBlackout
+{
+    _timeOutToBlackout = timeOutToBlackout;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self _saveUserDefaults];
+    });
+}
+
+#pragma mark - Methods
+
 - (void)startMonitor
 {
     if (self.monitorType & FJCLuciferMonitorTypeMouse)
     {
         [self _startCursorMonitor];
+        _isMonitoring = YES;
     }
     
     if (self.monitorType & FJCLuciferMonitorTypeKeyboard)
     {
         [self _startKeyboardMonitor];
+        _isMonitoring = YES;
     }
 }
 
 - (void)stopMonitor
 {
     [[FJCLEDMonitor sharedMonitor] stopMonitoring];
+    [self.timer invalidate], self.timer = nil;
     
     [NSEvent removeMonitor:self.keyboardEventMonitor];
     [NSEvent removeMonitor:self.mouseEventMonitor];
+    
+    _isMonitoring = NO;
 }
 
 #pragma mark - Notifications
@@ -102,8 +135,9 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 
 - (void)_startKeyboardMonitor
 {
-    KBLStartLightService();
+    if (self.keyboardEventMonitor) return;
     
+    KBLStartLightService();
     [[FJCLEDMonitor sharedMonitor] startMonitoring];
     
     self.keyboardEventMonitor =
@@ -131,8 +165,9 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 
 - (void)_startCursorMonitor
 {
-    KBLStartLightService();
+    if (self.mouseEventMonitor) return;
     
+    KBLStartLightService();
     [[FJCLEDMonitor sharedMonitor] startMonitoring];
     
     self.mouseEventMonitor =
@@ -170,6 +205,15 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
     // Stores the previous light power before turning it off
     self.keyboardLEDPreviousValue = KBLGetKeyboardLEDValue();
     KBLSetKeyboardLEDValueFade(0, kLEDDimmingDuration);
+}
+
+- (void)_saveUserDefaults
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setInteger:self.monitorType forKey:kMonitorTypeUserDefaults];
+    [userDefaults setDouble:self.timeOutToBlackout forKey:kTimeOutUserDefaults];
+    
+    [userDefaults synchronize];
 }
 
 @end

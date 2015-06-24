@@ -23,6 +23,8 @@ typedef NS_ENUM(short, FJCLuciferMonitorType)
 @property (nonatomic, strong) NSMutableArray *blackList;
 @property (nonatomic, readwrite) NSTimeInterval timeOutToBlackout;
 
+@property (nonatomic, readonly) BOOL isMonitoring;
+
 
 #pragma mark - Methods
 

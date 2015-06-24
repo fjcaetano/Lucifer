@@ -11,12 +11,157 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="menu" destination="tEp-9i-joJ" id="Xro-6u-6Gv"/>
+                <outlet property="preferencesPanel" destination="Yug-U3-jWV" id="lPb-IR-cga"/>
+            </connections>
+        </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <slider horizontalHuggingPriority="750" id="vff-7m-ynJ">
-            <rect key="frame" x="0.0" y="0.0" width="21" height="96"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="S5z-d3-2DB"/>
-        </slider>
+        <menu id="tEp-9i-joJ">
+            <items>
+                <menuItem title="Disable" keyEquivalent="l" id="ZA4-xo-mzl">
+                    <modifierMask key="keyEquivalentModifierMask" control="YES" option="YES" command="YES"/>
+                    <connections>
+                        <action selector="didPressToggleEnabled:" target="Voe-Tx-rLC" id="K2T-Wt-zB7"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="hMd-QP-OnR"/>
+                <menuItem title="Preferences" id="GDq-Bh-yTE">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="makeKeyAndOrderFront:" target="Yug-U3-jWV" id="d2I-Es-Q0T"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="1NM-JD-d65"/>
+                <menuItem title="Quit" id="wHI-AF-gAf">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="didPressQuitItem:" target="Voe-Tx-rLC" id="q9P-hd-VaL"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-2106" y="-2206.5"/>
+        </menu>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="Yug-U3-jWV" customClass="FJCPreferencesPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="120" y="64" width="387" height="145"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <view key="contentView" id="jAz-TY-7Ht">
+                <rect key="frame" x="0.0" y="3" width="387" height="145"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Na9-BI-sXt">
+                        <rect key="frame" x="18" y="21" width="351" height="25"/>
+                        <sliderCell key="cell" continuous="YES" state="on" userInterfaceLayoutDirection="rightToLeft" alignment="left" minValue="1" maxValue="30" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="30" allowsTickMarkValuesOnly="YES" sliderType="linear" id="P6w-yV-GaX"/>
+                        <connections>
+                            <action selector="didChangeSliderValue:" target="Yug-U3-jWV" id="e4x-43-jyW"/>
+                        </connections>
+                    </slider>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mah-GO-Qiu">
+                        <rect key="frame" x="6" y="5" width="48" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="bqP-ei-8aS"/>
+                            <constraint firstAttribute="width" constant="44" id="vBf-rW-akr"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="30 min" id="WIL-8x-O4v">
+                            <font key="font" size="13" name="HelveticaNeue"/>
+                            <color key="textColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3cp-6E-hnp">
+                        <rect key="frame" x="170" y="5" width="48" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="9jE-tf-lVL"/>
+                            <constraint firstAttribute="width" constant="44" id="SkR-ji-LQJ"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="15 min" id="H37-nU-nxW">
+                            <font key="font" size="13" name="HelveticaNeue"/>
+                            <color key="textColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cAV-HK-za9" userLabel="1 min">
+                        <rect key="frame" x="333" y="5" width="48" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="STr-Fu-Wjr"/>
+                            <constraint firstAttribute="height" constant="19" id="n4c-7g-E9P"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1 min" id="Z0u-nN-zmx" userLabel="1 min">
+                            <font key="font" size="13" name="HelveticaNeue"/>
+                            <color key="textColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="REp-hW-5CC">
+                        <rect key="frame" x="304" y="52" width="65" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="XVV-Va-Pbm"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1 minutes" id="5kW-qP-vrW">
+                            <font key="font" size="13" name="HelveticaNeue"/>
+                            <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hv9-6g-7Pd">
+                        <rect key="frame" x="18" y="52" width="191" height="20"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Turn keyboard backlit off after" id="iG2-ZI-271">
+                            <font key="font" size="14" name="HelveticaNeue"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="lGH-AP-F6f">
+                        <rect key="frame" x="18" y="109" width="133" height="18"/>
+                        <buttonCell key="cell" type="check" title="Monitor Keyboard" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="yTe-hN-D72">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="didPressMonitorKeyboardButton:" target="Yug-U3-jWV" id="ZNw-Xl-2ll"/>
+                        </connections>
+                    </button>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="n4y-59-Dor">
+                        <rect key="frame" x="18" y="89" width="177" height="18"/>
+                        <buttonCell key="cell" type="check" title="Monitor Mouse/Trackpad" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="swR-eL-Tb4">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="didPressMonitorMouseButton:" target="Yug-U3-jWV" id="sDk-23-4EJ"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lGH-AP-F6f" firstAttribute="leading" secondItem="n4y-59-Dor" secondAttribute="leading" id="0cm-L0-trm"/>
+                    <constraint firstAttribute="trailing" secondItem="Na9-BI-sXt" secondAttribute="trailing" constant="20" id="8ke-6o-9PY"/>
+                    <constraint firstItem="Na9-BI-sXt" firstAttribute="leading" secondItem="jAz-TY-7Ht" secondAttribute="leading" constant="20" id="E0J-LC-RoC"/>
+                    <constraint firstItem="Hv9-6g-7Pd" firstAttribute="leading" secondItem="Na9-BI-sXt" secondAttribute="leading" id="HgX-VU-lqn"/>
+                    <constraint firstItem="Na9-BI-sXt" firstAttribute="top" secondItem="Hv9-6g-7Pd" secondAttribute="bottom" constant="8" id="Pnu-Ql-oxC"/>
+                    <constraint firstItem="n4y-59-Dor" firstAttribute="top" secondItem="lGH-AP-F6f" secondAttribute="bottom" constant="6" id="Ut0-cM-lWC"/>
+                    <constraint firstItem="Mah-GO-Qiu" firstAttribute="top" secondItem="Na9-BI-sXt" secondAttribute="bottom" constant="-2" id="dan-Ia-xve"/>
+                    <constraint firstItem="Mah-GO-Qiu" firstAttribute="leading" secondItem="Na9-BI-sXt" secondAttribute="leading" constant="-12" id="inV-LP-zcq"/>
+                    <constraint firstItem="3cp-6E-hnp" firstAttribute="centerX" secondItem="Na9-BI-sXt" secondAttribute="centerX" id="jXA-zv-ST6"/>
+                    <constraint firstItem="3cp-6E-hnp" firstAttribute="centerY" secondItem="Mah-GO-Qiu" secondAttribute="centerY" id="lih-cI-Xb3"/>
+                    <constraint firstItem="Na9-BI-sXt" firstAttribute="trailing" secondItem="REp-hW-5CC" secondAttribute="trailing" id="mdh-iK-9Gq"/>
+                    <constraint firstItem="3cp-6E-hnp" firstAttribute="centerY" secondItem="cAV-HK-za9" secondAttribute="centerY" id="mgu-hj-7wq"/>
+                    <constraint firstItem="Hv9-6g-7Pd" firstAttribute="leading" secondItem="lGH-AP-F6f" secondAttribute="leading" id="mqs-4z-57M"/>
+                    <constraint firstItem="Na9-BI-sXt" firstAttribute="top" secondItem="REp-hW-5CC" secondAttribute="bottom" constant="8" id="nSI-qq-P5Q"/>
+                    <constraint firstItem="Na9-BI-sXt" firstAttribute="trailing" secondItem="cAV-HK-za9" secondAttribute="trailing" constant="-12" id="vrg-Dm-Qkn"/>
+                    <constraint firstItem="lGH-AP-F6f" firstAttribute="top" secondItem="jAz-TY-7Ht" secondAttribute="top" constant="20" id="wov-SB-qP4"/>
+                    <constraint firstAttribute="bottom" secondItem="Na9-BI-sXt" secondAttribute="bottom" constant="22" id="z9j-uP-N2Q"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="monitorKeyboardButton" destination="lGH-AP-F6f" id="kWy-sK-vaZ"/>
+                <outlet property="monitorMouseButton" destination="n4y-59-Dor" id="Pfj-Gh-At1"/>
+                <outlet property="selectedTimeLabel" destination="REp-hW-5CC" id="83i-Tt-pzU"/>
+                <outlet property="timeoutSlider" destination="Na9-BI-sXt" id="LjY-C5-M9b"/>
+            </connections>
+            <point key="canvasLocation" x="-1736.5" y="-2160.5"/>
+        </window>
     </objects>
 </document>

@@ -16,6 +16,7 @@
 		F2B359CD1B3A283900E6D097 /* KBLKeyboardBacklightService.c in Sources */ = {isa = PBXBuildFile; fileRef = F2B359C91B3A283900E6D097 /* KBLKeyboardBacklightService.c */; };
 		F2B359D21B3AED1200E6D097 /* FJCLEDMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359D11B3AED1200E6D097 /* FJCLEDMonitor.m */; };
 		F2B359D51B3AF50400E6D097 /* FJCLuciferController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359D41B3AF50400E6D097 /* FJCLuciferController.m */; };
+		F2B359D91B3B271400E6D097 /* FJCPreferencesPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359D81B3B271400E6D097 /* FJCPreferencesPanel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		F2B359D11B3AED1200E6D097 /* FJCLEDMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCLEDMonitor.m; sourceTree = "<group>"; };
 		F2B359D31B3AF50400E6D097 /* FJCLuciferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCLuciferController.h; sourceTree = "<group>"; };
 		F2B359D41B3AF50400E6D097 /* FJCLuciferController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCLuciferController.m; sourceTree = "<group>"; };
+		F2B359D71B3B271400E6D097 /* FJCPreferencesPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJCPreferencesPanel.h; path = Panels/FJCPreferencesPanel.h; sourceTree = "<group>"; };
+		F2B359D81B3B271400E6D097 /* FJCPreferencesPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FJCPreferencesPanel.m; path = Panels/FJCPreferencesPanel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,7 @@
 		F2B359A51B3A1E2900E6D097 /* Lucifer */ = {
 			isa = PBXGroup;
 			children = (
+				F2B359D61B3B26FE00E6D097 /* Panels */,
 				F2B359C81B3A283900E6D097 /* WizardKeys */,
 				F2B359A81B3A1E2900E6D097 /* AppDelegate.h */,
 				F2B359A91B3A1E2900E6D097 /* AppDelegate.m */,
@@ -138,6 +142,15 @@
 			path = WizardKeys;
 			sourceTree = SOURCE_ROOT;
 		};
+		F2B359D61B3B26FE00E6D097 /* Panels */ = {
+			isa = PBXGroup;
+			children = (
+				F2B359D71B3B271400E6D097 /* FJCPreferencesPanel.h */,
+				F2B359D81B3B271400E6D097 /* FJCPreferencesPanel.m */,
+			);
+			name = Panels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,6 +195,7 @@
 		F2B3599B1B3A1E2800E6D097 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FJC;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Shufflow;
 				TargetAttributes = {
@@ -240,6 +254,7 @@
 				F2B359CD1B3A283900E6D097 /* KBLKeyboardBacklightService.c in Sources */,
 				F2B359AC1B3A1E2900E6D097 /* main.m in Sources */,
 				F2B359D21B3AED1200E6D097 /* FJCLEDMonitor.m in Sources */,
+				F2B359D91B3B271400E6D097 /* FJCPreferencesPanel.m in Sources */,
 				F2B359AA1B3A1E2900E6D097 /* AppDelegate.m in Sources */,
 				F2B359D51B3AF50400E6D097 /* FJCLuciferController.m in Sources */,
 			);
@@ -431,6 +446,7 @@
 				F2B359C21B3A1E2900E6D097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2B359C31B3A1E2900E6D097 /* Build configuration list for PBXNativeTarget "LuciferTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +455,7 @@
 				F2B359C51B3A1E2900E6D097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
