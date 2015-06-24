@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="menu" destination="tEp-9i-joJ" id="Xro-6u-6Gv"/>
                 <outlet property="preferencesPanel" destination="Yug-U3-jWV" id="lPb-IR-cga"/>
+                <outlet property="toggleStatusMenuItem" destination="ZA4-xo-mzl" id="ApY-rl-Fup"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -43,7 +44,7 @@
             </items>
             <point key="canvasLocation" x="-2106" y="-2206.5"/>
         </menu>
-        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="Yug-U3-jWV" customClass="FJCPreferencesPanel">
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Yug-U3-jWV" customClass="FJCPreferencesPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="120" y="64" width="387" height="145"/>

@@ -91,8 +91,25 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 
 #pragma mark - Methods
 
-- (void)startMonitor
+- (BOOL)startMonitor
 {
+    NSString *key = (__bridge NSString *) kAXTrustedCheckOptionPrompt;
+    CFDictionaryRef options = (__bridge CFDictionaryRef) @{key: @YES};
+    if (!AXIsProcessTrustedWithOptions(options))
+    {
+//        NSAlert *alert = [NSAlert new];
+//        alert.alertStyle = NSCriticalAlertStyle;
+//        alert.messageText = @"Access Denied";
+//        alert.informativeText = @"Lucifer does not have enough access to work properly. You must provide the required access and launch Lucifer again.";
+//        
+//        [alert addButtonWithTitle:@"OK"];
+//        [alert runModal];
+//        
+//        exit(-1);
+        
+        return NO;
+    }
+    
     if (self.monitorType & FJCLuciferMonitorTypeMouse)
     {
         [self _startCursorMonitor];
@@ -104,6 +121,8 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
         [self _startKeyboardMonitor];
         _isMonitoring = YES;
     }
+    
+    return YES;
 }
 
 - (void)stopMonitor

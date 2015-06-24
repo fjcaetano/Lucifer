@@ -21,7 +21,9 @@
 @property (weak) IBOutlet FJCPreferencesPanel *preferencesPanel;
 
 @property (nonatomic, strong) NSStatusItem *statusItem;
+
 @property (weak) IBOutlet NSMenu *menu;
+@property (weak) IBOutlet NSMenuItem *toggleStatusMenuItem;
 
 @end
 
@@ -35,8 +37,15 @@
     self.statusItem.menu = self.menu;
 
     FJCLuciferController *lu = [FJCLuciferController sharedController];
-    lu.timeOutToBlackout = 5;
-    [lu startMonitor];
+    self.toggleStatusMenuItem.title = ([lu startMonitor] ? @"Disable" : @"Enable");
+    
+    // Register global hotkey for enable/disable
+    [NSEvent addGlobalMonitorForEventsMatchingMask:NSKeyDownMask handler:^(NSEvent *event) {
+        if (event.modifierFlags & (NSControlKeyMask | NSAlternateKeyMask | NSCommandKeyMask) && event.keyCode == 37)
+        {
+            [self didPressToggleEnabled:self.toggleStatusMenuItem];
+        }
+    }];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
@@ -54,9 +63,8 @@
         [lu stopMonitor];
         sender.title = @"Enable";
     }
-    else
+    else if ([lu startMonitor])
     {
-        [lu startMonitor];
         sender.title = @"Disable";
     }
 }
@@ -66,6 +74,5 @@
 {
     exit(0);
 }
-
 
 @end

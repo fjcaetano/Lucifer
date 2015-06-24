@@ -30,7 +30,7 @@ typedef NS_ENUM(short, FJCLuciferMonitorType)
 
 + (instancetype)sharedController;
 
-- (void)startMonitor;
+- (BOOL)startMonitor;
 - (void)stopMonitor;
 
 @end
