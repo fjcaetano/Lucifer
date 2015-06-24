@@ -8,15 +8,33 @@
 
 #import "AppDelegate.h"
 
+// Controllers
+#include "KBLKeyboardBacklightService.h"
+#include "FJCLuciferController.h"
+
+
 @interface AppDelegate ()
+{
+    CFRunLoopSourceRef downSourceRef;
+}
 
 @property (weak) IBOutlet NSWindow *window;
+
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) id eventHandler;
+@property (nonatomic, readwrite) uint64_t keyboardLightValue;
+
 @end
+
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+    FJCLuciferController *lu = [FJCLuciferController sharedController];
+    lu.monitorType = (FJCLuciferMonitorTypeMouse | FJCLuciferMonitorTypeKeyboard);
+    
+    [lu startMonitor];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

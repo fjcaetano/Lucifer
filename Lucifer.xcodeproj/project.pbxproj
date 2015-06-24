@@ -12,6 +12,10 @@
 		F2B359AE1B3A1E2900E6D097 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B359AD1B3A1E2900E6D097 /* Images.xcassets */; };
 		F2B359B11B3A1E2900E6D097 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B359AF1B3A1E2900E6D097 /* MainMenu.xib */; };
 		F2B359BD1B3A1E2900E6D097 /* LuciferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359BC1B3A1E2900E6D097 /* LuciferTests.m */; };
+		F2B359C71B3A214500E6D097 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B359C61B3A214500E6D097 /* IOKit.framework */; };
+		F2B359CD1B3A283900E6D097 /* KBLKeyboardBacklightService.c in Sources */ = {isa = PBXBuildFile; fileRef = F2B359C91B3A283900E6D097 /* KBLKeyboardBacklightService.c */; };
+		F2B359D21B3AED1200E6D097 /* FJCLEDMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359D11B3AED1200E6D097 /* FJCLEDMonitor.m */; };
+		F2B359D51B3AF50400E6D097 /* FJCLuciferController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359D41B3AF50400E6D097 /* FJCLuciferController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,13 @@
 		F2B359B61B3A1E2900E6D097 /* LuciferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuciferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B359BB1B3A1E2900E6D097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B359BC1B3A1E2900E6D097 /* LuciferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LuciferTests.m; sourceTree = "<group>"; };
+		F2B359C61B3A214500E6D097 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		F2B359C91B3A283900E6D097 /* KBLKeyboardBacklightService.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KBLKeyboardBacklightService.c; sourceTree = "<group>"; };
+		F2B359CA1B3A283900E6D097 /* KBLKeyboardBacklightService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBLKeyboardBacklightService.h; sourceTree = "<group>"; };
+		F2B359D01B3AED1200E6D097 /* FJCLEDMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCLEDMonitor.h; sourceTree = "<group>"; };
+		F2B359D11B3AED1200E6D097 /* FJCLEDMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCLEDMonitor.m; sourceTree = "<group>"; };
+		F2B359D31B3AF50400E6D097 /* FJCLuciferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCLuciferController.h; sourceTree = "<group>"; };
+		F2B359D41B3AF50400E6D097 /* FJCLuciferController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCLuciferController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B359C71B3A214500E6D097 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +70,7 @@
 		F2B3599A1B3A1E2800E6D097 = {
 			isa = PBXGroup;
 			children = (
+				F2B359C61B3A214500E6D097 /* IOKit.framework */,
 				F2B359A51B3A1E2900E6D097 /* Lucifer */,
 				F2B359B91B3A1E2900E6D097 /* LuciferTests */,
 				F2B359A41B3A1E2900E6D097 /* Products */,
@@ -76,11 +89,16 @@
 		F2B359A51B3A1E2900E6D097 /* Lucifer */ = {
 			isa = PBXGroup;
 			children = (
+				F2B359C81B3A283900E6D097 /* WizardKeys */,
 				F2B359A81B3A1E2900E6D097 /* AppDelegate.h */,
 				F2B359A91B3A1E2900E6D097 /* AppDelegate.m */,
 				F2B359AD1B3A1E2900E6D097 /* Images.xcassets */,
 				F2B359AF1B3A1E2900E6D097 /* MainMenu.xib */,
 				F2B359A61B3A1E2900E6D097 /* Supporting Files */,
+				F2B359D01B3AED1200E6D097 /* FJCLEDMonitor.h */,
+				F2B359D11B3AED1200E6D097 /* FJCLEDMonitor.m */,
+				F2B359D31B3AF50400E6D097 /* FJCLuciferController.h */,
+				F2B359D41B3AF50400E6D097 /* FJCLuciferController.m */,
 			);
 			path = Lucifer;
 			sourceTree = "<group>";
@@ -110,6 +128,15 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		F2B359C81B3A283900E6D097 /* WizardKeys */ = {
+			isa = PBXGroup;
+			children = (
+				F2B359C91B3A283900E6D097 /* KBLKeyboardBacklightService.c */,
+				F2B359CA1B3A283900E6D097 /* KBLKeyboardBacklightService.h */,
+			);
+			path = WizardKeys;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -210,8 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B359CD1B3A283900E6D097 /* KBLKeyboardBacklightService.c in Sources */,
 				F2B359AC1B3A1E2900E6D097 /* main.m in Sources */,
+				F2B359D21B3AED1200E6D097 /* FJCLEDMonitor.m in Sources */,
 				F2B359AA1B3A1E2900E6D097 /* AppDelegate.m in Sources */,
+				F2B359D51B3AF50400E6D097 /* FJCLuciferController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

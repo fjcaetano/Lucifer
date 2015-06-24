@@ -1,0 +1,3 @@
+[submodule "WizardKeys"]
+	path = WizardKeys
+	url = git@github.com:fjcaetano/WizardKeys.git
