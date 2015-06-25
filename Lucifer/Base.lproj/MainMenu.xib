@@ -31,7 +31,7 @@
                 <menuItem title="Preferences" id="GDq-Bh-yTE">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="makeKeyAndOrderFront:" target="Yug-U3-jWV" id="d2I-Es-Q0T"/>
+                        <action selector="makeKeyAndOrderFront:" target="Yug-U3-jWV" id="Sqh-5I-ZqV"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="1NM-JD-d65"/>
@@ -44,10 +44,10 @@
             </items>
             <point key="canvasLocation" x="-2106" y="-2206.5"/>
         </menu>
-        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Yug-U3-jWV" customClass="FJCPreferencesPanel">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="120" y="64" width="387" height="220"/>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Yug-U3-jWV" customClass="FJCPreferencesPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="423" y="251" width="387" height="220"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="jAz-TY-7Ht">
                 <rect key="frame" x="0.0" y="0.0" width="387" height="220"/>
