@@ -50,6 +50,7 @@ static NSString *const kKeystroke = @"kKeystroke";
     
     [self.tableView reloadData];
     
+    [NSApp activateIgnoringOtherApps:YES];
     [super makeKeyAndOrderFront:sender];
 }
 

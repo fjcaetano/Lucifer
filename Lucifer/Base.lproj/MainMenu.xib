@@ -44,17 +44,17 @@
             </items>
             <point key="canvasLocation" x="-2106" y="-2206.5"/>
         </menu>
-        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Yug-U3-jWV" customClass="FJCPreferencesPanel">
+        <window title="Lucifer Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Yug-U3-jWV" customClass="FJCPreferencesPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="423" y="251" width="387" height="220"/>
+            <rect key="contentRect" x="423" y="251" width="403" height="236"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="jAz-TY-7Ht">
-                <rect key="frame" x="0.0" y="0.0" width="387" height="220"/>
+                <rect key="frame" x="0.0" y="0.0" width="403" height="236"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <tabView translatesAutoresizingMaskIntoConstraints="NO" id="nx1-wi-Nmd">
-                        <rect key="frame" x="-7" y="-10" width="401" height="236"/>
+                        <rect key="frame" x="1" y="-2" width="401" height="236"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="220" id="Noq-Dr-mOs"/>
                             <constraint firstAttribute="width" constant="387" id="jWy-pq-ipF"/>
@@ -129,7 +129,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <button translatesAutoresizingMaskIntoConstraints="NO" id="n4y-59-Dor">
-                                            <rect key="frame" x="18" y="136" width="177" height="18"/>
+                                            <rect key="frame" x="18" y="112" width="177" height="18"/>
                                             <buttonCell key="cell" type="check" title="Monitor Mouse/Trackpad" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="swR-eL-Tb4">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -139,7 +139,7 @@
                                             </connections>
                                         </button>
                                         <button translatesAutoresizingMaskIntoConstraints="NO" id="lGH-AP-F6f">
-                                            <rect key="frame" x="18" y="158" width="133" height="18"/>
+                                            <rect key="frame" x="18" y="142" width="133" height="18"/>
                                             <buttonCell key="cell" type="check" title="Monitor Keyboard" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="yTe-hN-D72">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -151,9 +151,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="cAV-HK-za9" firstAttribute="trailing" secondItem="Na9-BI-sXt" secondAttribute="trailing" constant="12" id="37j-0x-0kO"/>
-                                        <constraint firstItem="lGH-AP-F6f" firstAttribute="top" secondItem="UQc-c8-47P" secondAttribute="top" constant="16" id="8Kp-9y-FyM"/>
+                                        <constraint firstItem="lGH-AP-F6f" firstAttribute="top" secondItem="UQc-c8-47P" secondAttribute="top" constant="32" id="8Kp-9y-FyM"/>
                                         <constraint firstItem="Hv9-6g-7Pd" firstAttribute="leading" secondItem="Na9-BI-sXt" secondAttribute="leading" id="C6R-0V-Zym"/>
-                                        <constraint firstItem="n4y-59-Dor" firstAttribute="top" secondItem="lGH-AP-F6f" secondAttribute="bottom" constant="8" id="Cyr-ic-5pS"/>
+                                        <constraint firstItem="n4y-59-Dor" firstAttribute="top" secondItem="lGH-AP-F6f" secondAttribute="bottom" constant="16" id="Cyr-ic-5pS"/>
                                         <constraint firstItem="Na9-BI-sXt" firstAttribute="leading" secondItem="Mah-GO-Qiu" secondAttribute="leading" constant="12" id="J3E-nZ-ATj"/>
                                         <constraint firstItem="Na9-BI-sXt" firstAttribute="top" secondItem="REp-hW-5CC" secondAttribute="bottom" constant="5" id="RGW-9n-dsO"/>
                                         <constraint firstItem="cAV-HK-za9" firstAttribute="top" secondItem="Na9-BI-sXt" secondAttribute="bottom" constant="-3" id="U0r-3Y-I6H"/>
@@ -314,10 +314,10 @@
                     </tabView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="nx1-wi-Nmd" secondAttribute="bottom" id="3eS-7m-fw4"/>
-                    <constraint firstAttribute="trailing" secondItem="nx1-wi-Nmd" secondAttribute="trailing" id="IbQ-bi-a0l"/>
-                    <constraint firstItem="nx1-wi-Nmd" firstAttribute="top" secondItem="jAz-TY-7Ht" secondAttribute="top" id="Rao-gd-Ebs"/>
-                    <constraint firstItem="nx1-wi-Nmd" firstAttribute="leading" secondItem="jAz-TY-7Ht" secondAttribute="leading" id="U4l-qz-Ors"/>
+                    <constraint firstAttribute="bottom" secondItem="nx1-wi-Nmd" secondAttribute="bottom" constant="8" id="3eS-7m-fw4"/>
+                    <constraint firstAttribute="trailing" secondItem="nx1-wi-Nmd" secondAttribute="trailing" constant="8" id="IbQ-bi-a0l"/>
+                    <constraint firstItem="nx1-wi-Nmd" firstAttribute="top" secondItem="jAz-TY-7Ht" secondAttribute="top" constant="8" id="Rao-gd-Ebs"/>
+                    <constraint firstItem="nx1-wi-Nmd" firstAttribute="leading" secondItem="jAz-TY-7Ht" secondAttribute="leading" constant="8" id="U4l-qz-Ors"/>
                 </constraints>
             </view>
             <connections>
