@@ -20,7 +20,7 @@ typedef NS_ENUM(short, FJCLuciferMonitorType)
 
 @property (nonatomic, readwrite) FJCLuciferMonitorType monitorType;
 
-@property (nonatomic, strong) NSMutableArray *blackList;
+@property (nonatomic, readonly) NSArray *blackList;
 @property (nonatomic, readwrite) NSTimeInterval timeOutToBlackout;
 
 @property (nonatomic, readonly) BOOL isMonitoring;
@@ -32,5 +32,8 @@ typedef NS_ENUM(short, FJCLuciferMonitorType)
 
 - (BOOL)startMonitor;
 - (void)stopMonitor;
+
+- (void)addKeyToBlacklist:(id)keyCode;
+- (void)removeItemsAtIndexesFromBlackList:(NSIndexSet *)indexSet;
 
 @end

@@ -18,6 +18,7 @@
 // Keys
 static NSString *const kMonitorTypeUserDefaults = @"kMonitorTypeUserDefaults";
 static NSString *const kTimeOutUserDefaults = @"kTimeOutUserDefaults";
+static NSString *const kBlacklistUserDefaults = @"kBlacklistUserDefaults";
 
 
 static uint64_t const kLEDDimmingDuration = 1000;
@@ -25,6 +26,8 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 
 
 @interface FJCLuciferController ()
+
+@property (nonatomic, strong) NSMutableArray *blackList;
 
 @property (nonatomic, weak) id keyboardEventMonitor;
 @property (nonatomic, weak) id mouseEventMonitor;
@@ -45,7 +48,7 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
     {
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         
-        self.blackList = [NSMutableArray new];
+        self.blackList = [([userDefaults valueForKey:kBlacklistUserDefaults] ?: @[]) mutableCopy];
         self.timeOutToBlackout = ([userDefaults doubleForKey:kTimeOutUserDefaults] ?: kDefaultTimeoutToBlackout);
         self.monitorType = ([userDefaults integerForKey:kMonitorTypeUserDefaults] ?: FJCLuciferMonitorTypeKeyboard);
         
@@ -95,20 +98,7 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 {
     NSString *key = (__bridge NSString *) kAXTrustedCheckOptionPrompt;
     CFDictionaryRef options = (__bridge CFDictionaryRef) @{key: @YES};
-    if (!AXIsProcessTrustedWithOptions(options))
-    {
-//        NSAlert *alert = [NSAlert new];
-//        alert.alertStyle = NSCriticalAlertStyle;
-//        alert.messageText = @"Access Denied";
-//        alert.informativeText = @"Lucifer does not have enough access to work properly. You must provide the required access and launch Lucifer again.";
-//        
-//        [alert addButtonWithTitle:@"OK"];
-//        [alert runModal];
-//        
-//        exit(-1);
-        
-        return NO;
-    }
+    if (!AXIsProcessTrustedWithOptions(options)) return NO;
     
     if (self.monitorType & FJCLuciferMonitorTypeMouse)
     {
@@ -134,6 +124,20 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
     [NSEvent removeMonitor:self.mouseEventMonitor];
     
     _isMonitoring = NO;
+}
+
+- (void)addKeyToBlacklist:(id)keyCode
+{
+    [(NSMutableArray *)self.blackList addObject:keyCode];
+    
+    [self _saveUserDefaults];
+}
+
+- (void)removeItemsAtIndexesFromBlackList:(NSIndexSet *)indexSet
+{
+    [(NSMutableArray *)self.blackList removeObjectsAtIndexes:indexSet];
+    
+    [self _saveUserDefaults];
 }
 
 #pragma mark - Notifications
@@ -231,6 +235,7 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setInteger:self.monitorType forKey:kMonitorTypeUserDefaults];
     [userDefaults setDouble:self.timeOutToBlackout forKey:kTimeOutUserDefaults];
+    [userDefaults setValue:self.blackList forKey:kBlacklistUserDefaults];
     
     [userDefaults synchronize];
 }

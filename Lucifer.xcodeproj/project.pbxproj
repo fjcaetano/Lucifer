@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2B350D71B3B6793007F1E41 /* KeyMapping.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2B350D61B3B6793007F1E41 /* KeyMapping.plist */; };
 		F2B359AA1B3A1E2900E6D097 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359A91B3A1E2900E6D097 /* AppDelegate.m */; };
 		F2B359AC1B3A1E2900E6D097 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359AB1B3A1E2900E6D097 /* main.m */; };
 		F2B359AE1B3A1E2900E6D097 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B359AD1B3A1E2900E6D097 /* Images.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F2B350D61B3B6793007F1E41 /* KeyMapping.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = KeyMapping.plist; path = Resources/KeyMapping.plist; sourceTree = "<group>"; };
 		F2B359A31B3A1E2900E6D097 /* Lucifer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lucifer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B359A71B3A1E2900E6D097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B359A81B3A1E2900E6D097 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F2B350D51B3B6774007F1E41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2B350D61B3B6793007F1E41 /* KeyMapping.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		F2B3599A1B3A1E2800E6D097 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 				F2B359D11B3AED1200E6D097 /* FJCLEDMonitor.m */,
 				F2B359D31B3AF50400E6D097 /* FJCLuciferController.h */,
 				F2B359D41B3AF50400E6D097 /* FJCLuciferController.m */,
+				F2B350D51B3B6774007F1E41 /* Resources */,
 			);
 			path = Lucifer;
 			sourceTree = "<group>";
@@ -233,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B359AE1B3A1E2900E6D097 /* Images.xcassets in Resources */,
+				F2B350D71B3B6793007F1E41 /* KeyMapping.plist in Resources */,
 				F2B359B11B3A1E2900E6D097 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
