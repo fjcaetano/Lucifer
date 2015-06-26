@@ -32,7 +32,7 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 @property (nonatomic, weak) id keyboardEventMonitor;
 @property (nonatomic, weak) id mouseEventMonitor;
 
-@property (nonatomic, readwrite) BOOL isKeyboardLit;
+@property (nonatomic, readonly) BOOL isKeyboardLit;
 @property (nonatomic, readwrite) uint64_t keyboardLEDPreviousValue;
 
 @property (nonatomic, strong) NSTimer *timer;
@@ -92,6 +92,11 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
     });
 }
 
+- (BOOL)isKeyboardLit
+{
+    return (KBLGetKeyboardLEDValue() > 100);
+}
+
 #pragma mark - Methods
 
 - (BOOL)startMonitor
@@ -112,11 +117,15 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
         _isMonitoring = YES;
     }
     
-    return YES;
+    DLog(@"Starting monitor: %d", self.isMonitoring);
+    
+    return self.isMonitoring;
 }
 
 - (void)stopMonitor
 {
+    DLog(@"Stopping monitor");
+    
     [[FJCLEDMonitor sharedMonitor] stopMonitoring];
     [self.timer invalidate], self.timer = nil;
     
@@ -144,12 +153,11 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 
 - (void)_didUpdateKBLValue:(NSNotification *)notification
 {
-    uint64_t kblValue = [notification.object unsignedLongLongValue];
-    self.isKeyboardLit = (kblValue > 100);
-    
     // Checking whether or not the keyboard was lit using hardware keys (F5, F6)
     if (self.isKeyboardLit)
     {
+        DLog(@"Handling BKL update");
+        
         [self _setupTimer];
     }
 }
@@ -160,12 +168,17 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 {
     if (self.keyboardEventMonitor) return;
     
+    DLog(@"Starting keystrokes monitor");
+    
     KBLStartLightService();
     [[FJCLEDMonitor sharedMonitor] startMonitoring];
     
     self.keyboardEventMonitor =
     [NSEvent addGlobalMonitorForEventsMatchingMask:(NSKeyDownMask|NSFlagsChangedMask)
                                            handler:^(NSEvent *event) {
+                                               NSString *chars = (event.type == NSKeyDown ? event.characters : nil);
+                                               DLog(@"Did detect key: %d ('%@')", event.keyCode, chars);
+                                               
                                                if (!self.isKeyboardLit)
                                                {
                                                    // Did stroke key with keyboard off
@@ -190,12 +203,16 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 {
     if (self.mouseEventMonitor) return;
     
+    DLog(@"Starting mouse movement monitor");
+    
     KBLStartLightService();
     [[FJCLEDMonitor sharedMonitor] startMonitoring];
     
     self.mouseEventMonitor =
     [NSEvent addGlobalMonitorForEventsMatchingMask:(NSMouseMovedMask|NSScrollWheelMask|NSLeftMouseDownMask|NSRightMouseDownMask)
                                            handler:^(NSEvent *event) {
+                                               DLog(@"Did detect move mouse");
+                                               
                                                if (!self.isKeyboardLit)
                                                {
                                                    // Did mouse event with keyboard off
@@ -215,18 +232,23 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 
 - (void)_setupTimer
 {
-    [self.timer invalidate], self.timer = nil;
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:self.timeOutToBlackout
-                                                  target:self
-                                                selector:@selector(_timerDidFire)
-                                                userInfo:nil
-                                                 repeats:NO];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.timer invalidate], self.timer = nil;
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:self.timeOutToBlackout
+                                                      target:self
+                                                    selector:@selector(_timerDidFire)
+                                                    userInfo:nil
+                                                     repeats:NO];
+    });
 }
 
 - (void)_timerDidFire
 {
     // Stores the previous light power before turning it off
-    self.keyboardLEDPreviousValue = KBLGetKeyboardLEDValue();
+    self.keyboardLEDPreviousValue = (KBLGetKeyboardLEDValue() ?: self.keyboardLEDPreviousValue);
+    
+    DLog(@"Fading keyboard: %llu", self.keyboardLEDPreviousValue);
+    
     KBLSetKeyboardLEDValueFade(0, kLEDDimmingDuration);
 }
 

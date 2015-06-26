@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  Lucifer
+//
+//  Created by Flávio Caetano on 6/25/15.
+//  Copyright (c) 2015 Shufflow. All rights reserved.
+//
+
+#ifndef Lucifer_PrefixHeader_pch
+#define Lucifer_PrefixHeader_pch
+
+// NSLog
+#ifdef DEBUG
+#	define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#    define DLog(...)
+#endif
+#define ALog(...) NSLog(__VA_ARGS__)
+
+#endif

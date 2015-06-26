@@ -63,6 +63,8 @@ static dispatch_queue_t _FJCLEDMonitorQueue = NULL;
             [[NSRunLoop currentRunLoop] run];
         });
         
+        DLog(@"Started KBL monitor");
+        
         return YES;
     }
     
@@ -74,6 +76,8 @@ static dispatch_queue_t _FJCLEDMonitorQueue = NULL;
     if (self.timer != nil)
     {
         [self.timer invalidate], self.timer = nil;
+        
+        DLog(@"Stopped KBL monitor");
         
         return YES;
     }
@@ -89,6 +93,8 @@ static dispatch_queue_t _FJCLEDMonitorQueue = NULL;
     
     if (LEDValue != self.previousLEDValue)
     {
+        DLog(@"Did update KBL value");
+        
         [[NSNotificationCenter defaultCenter] postNotificationName:kFJCLEDMonitorDidUpdateValue object:@(LEDValue)];
     }
     
