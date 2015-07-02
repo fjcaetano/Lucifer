@@ -33,11 +33,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
-    self.statusItem.image = [NSImage imageNamed:@"statusItemIcon"];
     self.statusItem.menu = self.menu;
 
-    FJCLuciferController *lu = [FJCLuciferController sharedController];
-    self.toggleStatusMenuItem.title = ([lu startMonitor] ? @"Disable" : @"Enable");
+    [self didPressToggleEnabled:self.toggleStatusMenuItem];
     
     // Register global hotkey for enable/disable
     [NSEvent addGlobalMonitorForEventsMatchingMask:NSKeyDownMask handler:^(NSEvent *event) {
@@ -62,10 +60,14 @@
     {
         [lu stopMonitor];
         sender.title = @"Enable";
+        
+        self.statusItem.image = [NSImage imageNamed:@"statusItemIcon_Off"];
     }
     else if ([lu startMonitor])
     {
         sender.title = @"Disable";
+        
+        self.statusItem.image = [NSImage imageNamed:@"statusItemIcon_On"];
     }
 }
 

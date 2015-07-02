@@ -12,7 +12,7 @@
 #import "KBLKeyboardBacklightService.h"
 
 
-static const NSTimeInterval kTimerTimeInterval = 0.05;
+static const NSTimeInterval kTimerTimeInterval = 1;
 NSString *const kFJCLEDMonitorDidUpdateValue = @"kFJCLEDMonitorDidUpdateValue";
 static dispatch_queue_t _FJCLEDMonitorQueue = NULL;
 
@@ -89,6 +89,7 @@ static dispatch_queue_t _FJCLEDMonitorQueue = NULL;
 
 - (void)_didFireTimer
 {
+//    DLog(@"Did loop KBL monitor");
     uint64_t LEDValue = KBLGetKeyboardLEDValue();
     
     if (LEDValue != self.previousLEDValue)

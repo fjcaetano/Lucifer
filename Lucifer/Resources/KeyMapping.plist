@@ -73,7 +73,7 @@
 	<key>35</key>
 	<string>P</string>
 	<key>36</key>
-	<string>⏎</string>
+	<string>⏎ Return</string>
 	<key>37</key>
 	<string>L</string>
 	<key>38</key>
@@ -97,31 +97,31 @@
 	<key>47</key>
 	<string>.</string>
 	<key>48</key>
-	<string>⇥</string>
+	<string>⇥ Tab</string>
 	<key>49</key>
 	<string>Space</string>
 	<key>50</key>
 	<string>`</string>
 	<key>51</key>
-	<string>⌫</string>
+	<string>⌫ Delete</string>
 	<key>53</key>
-	<string>⎋</string>
+	<string>⎋ Escape</string>
 	<key>54</key>
-	<string>Right ⌘</string>
+	<string>⌘ Right Command</string>
 	<key>55</key>
-	<string>Left ⌘</string>
+	<string>⌘ Left Command</string>
 	<key>56</key>
-	<string>Left ⇧</string>
+	<string>⇧ Left Shift</string>
 	<key>57</key>
-	<string>Caps</string>
+	<string>⇪ Caps</string>
 	<key>58</key>
-	<string>Left ⌥</string>
+	<string>⌥ Left Option</string>
 	<key>60</key>
-	<string>Right ⇧</string>
+	<string>⇧ Right Shift</string>
 	<key>61</key>
-	<string>Right ⌥</string>
+	<string>⌥ Right Option</string>
 	<key>59</key>
-	<string>^</string>
+	<string>^ Control</string>
 	<key>63</key>
 	<string>Fn</string>
 	<key>123</key>
