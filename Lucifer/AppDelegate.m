@@ -39,7 +39,8 @@
     
     // Register global hotkey for enable/disable
     [NSEvent addGlobalMonitorForEventsMatchingMask:NSKeyDownMask handler:^(NSEvent *event) {
-        if (event.modifierFlags & (NSControlKeyMask | NSAlternateKeyMask | NSCommandKeyMask) && event.keyCode == 37)
+        if ((event.modifierFlags & NSDeviceIndependentModifierFlagsMask) == (NSControlKeyMask | NSAlternateKeyMask | NSCommandKeyMask) &&
+            event.keyCode == 37)
         {
             [self didPressToggleEnabled:self.toggleStatusMenuItem];
         }

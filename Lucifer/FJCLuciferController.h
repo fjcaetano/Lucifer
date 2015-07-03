@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-typedef NS_ENUM(short, FJCLuciferMonitorType)
+typedef NS_OPTIONS(short, FJCLuciferMonitorType)
 {
     FJCLuciferMonitorTypeKeyboard = 1 << 0,
     FJCLuciferMonitorTypeMouse = 1 << 1
