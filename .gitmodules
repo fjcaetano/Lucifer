@@ -1,3 +1,6 @@
 [submodule "WizardKeys"]
 	path = WizardKeys
 	url = git@github.com:fjcaetano/WizardKeys.git
+[submodule "Lucifer/External/FMT"]
+	path = Lucifer/External/FMT
+	url = git@github.com:fikovnik/FMT.git

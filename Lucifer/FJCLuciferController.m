@@ -101,9 +101,9 @@ static NSTimeInterval const kDefaultTimeoutToBlackout = 60*5;
 
 - (BOOL)startMonitor
 {
-    NSString *key = (__bridge NSString *) kAXTrustedCheckOptionPrompt;
-    CFDictionaryRef options = (__bridge CFDictionaryRef) @{key: @YES};
-    if (!AXIsProcessTrustedWithOptions(options)) return NO;
+//    NSString *key = (__bridge NSString *) kAXTrustedCheckOptionPrompt;
+//    CFDictionaryRef options = (__bridge CFDictionaryRef) @{key: @YES};
+//    if (!AXIsProcessTrustedWithOptions(options)) return NO;
     
     if (self.monitorType & FJCLuciferMonitorTypeMouse)
     {
