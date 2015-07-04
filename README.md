@@ -5,7 +5,7 @@ Lucifer
 
 Lucifer is a tiny daemon to dim your MacBook keyboard backlight due to inactivity. 
 
-![Screenshot1](https://raw.github.com/fjcaetano/Lucifer/master/screen_shot.png =437x)
+![Screenshot1](https://raw.githubusercontent.com/fjcaetano/Lucifer/master/screen_shot.png)
 
 ## Features
 
