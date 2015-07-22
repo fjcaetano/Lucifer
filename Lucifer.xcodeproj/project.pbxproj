@@ -283,6 +283,7 @@
 				F2B359A01B3A1E2800E6D097 /* Frameworks */,
 				F2B359A11B3A1E2800E6D097 /* Resources */,
 				F2E7CB691B6046B200FD8557 /* CopyFiles */,
+				F21D977C1B6052B8009CFDC5 /* Version Bumper */,
 			);
 			buildRules = (
 			);
@@ -433,6 +434,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F21D977C1B6052B8009CFDC5 /* Version Bumper */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Version Bumper";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "builddate=$(date -u +\"%Y-%m-%d\")\nif [[ -n \"$builddate\" ]]; then\n/usr/libexec/PlistBuddy -c \"Set :BTBuildDate $builddate\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\nfi\n\necho \"warning $CONFIGURATION\"\nif [ \"$CONFIGURATION\" != \"Release\" ]; then\nexit 0\nfi\n\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbN=$((0x$bN))\nbN=$(($bN + 1))\nbN=$(printf \"%X\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F2B3599F1B3A1E2800E6D097 /* Sources */ = {
