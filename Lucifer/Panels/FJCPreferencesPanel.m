@@ -9,11 +9,13 @@
 #import "FJCPreferencesPanel.h"
 
 // Controllers
+#import <ServiceManagement/ServiceManagement.h>
 #import "FJCLuciferController.h"
 
-// Identifiers
+// Constants
 static NSString *const kCode = @"kCode";
 static NSString *const kKeystroke = @"kKeystroke";
+static NSString *const kStartAtLoginUserDefaultsKey = @"kStartAtLoginUserDefaultsKey";
 
 
 @interface FJCPreferencesPanel () <NSTableViewDataSource, NSTableViewDelegate>
@@ -22,9 +24,12 @@ static NSString *const kKeystroke = @"kKeystroke";
 
 @property (nonatomic, weak) id keyCaptureMonitor;
 
+@property (nonatomic, strong) NSBundle *loginHelperBundle;
+
 // General Tab
 @property (weak) IBOutlet NSButton *monitorKeyboardButton;
 @property (weak) IBOutlet NSButton *monitorMouseButton;
+@property (weak) IBOutlet NSButton *startAtLoginButton;
 
 @property (weak) IBOutlet NSTextField *selectedTimeLabel;
 @property (weak) IBOutlet NSSlider *timeoutSlider;
@@ -44,10 +49,24 @@ static NSString *const kKeystroke = @"kKeystroke";
 
 - (void)makeKeyAndOrderFront:(id)sender
 {
+    
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *path = [[mainBundle bundlePath] stringByAppendingPathComponent: @"Contents/Library/LoginItems/Behemoth.app"];
+    self.loginHelperBundle = [NSBundle bundleWithPath:path];
+    
+    OSStatus error = LSRegisterURL((__bridge CFURLRef)self.loginHelperBundle.bundleURL, TRUE);
+    if (error != noErr)
+    {
+        ALog(@"LSRegisterURL failed to register %@ [%d]", self.loginHelperBundle.bundleURL, error);
+        self.startAtLoginButton.enabled = NO;
+    }
+    
+    
     // General Tab
     FJCLuciferController *lu = [FJCLuciferController sharedController];
     self.monitorMouseButton.state = (lu.monitorType & FJCLuciferMonitorTypeMouse);
     self.monitorKeyboardButton.state = (lu.monitorType & FJCLuciferMonitorTypeKeyboard);
+    self.startAtLoginButton.state = [[NSUserDefaults standardUserDefaults] boolForKey:kStartAtLoginUserDefaultsKey];
     
     int timeOutInMinutes = (lu.timeOutToBlackout / 60);
     self.timeoutSlider.integerValue = timeOutInMinutes;
@@ -64,6 +83,9 @@ static NSString *const kKeystroke = @"kKeystroke";
     self.versionLabel.stringValue = [NSString stringWithFormat:@"%@ (%@)",
                                      [bundle objectForInfoDictionaryKey:@"CFBundleShortVersionString"],
                                      [bundle objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey]];
+    
+    
+    
     
     [NSApp activateIgnoringOtherApps:YES];
     [super makeKeyAndOrderFront:sender];
@@ -164,6 +186,22 @@ static NSString *const kKeystroke = @"kKeystroke";
 - (IBAction)didPressGithubButton:(NSButton *)sender
 {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/fjcaetano/Lucifer"]];
+}
+
+- (IBAction)didPressStartAtLoginButton:(NSButton *)sender
+{
+    BOOL enabled = sender.state;
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if (SMLoginItemSetEnabled((__bridge CFStringRef) self.loginHelperBundle.bundleIdentifier, enabled))
+    {
+        [userDefaults setBool:enabled forKey:kStartAtLoginUserDefaultsKey];
+    }
+    else
+    {
+        [userDefaults setBool:NO forKey:kStartAtLoginUserDefaultsKey];
+        ALog(@"SMLoginItemSetEnabled failed!");
+    }
 }
 
 #pragma mark - Table View

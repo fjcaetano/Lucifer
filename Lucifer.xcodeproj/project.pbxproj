@@ -23,6 +23,12 @@
 		F2B359D21B3AED1200E6D097 /* FJCLEDMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359D11B3AED1200E6D097 /* FJCLEDMonitor.m */; };
 		F2B359D51B3AF50400E6D097 /* FJCLuciferController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359D41B3AF50400E6D097 /* FJCLuciferController.m */; };
 		F2B359D91B3B271400E6D097 /* FJCPreferencesPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359D81B3B271400E6D097 /* FJCPreferencesPanel.m */; };
+		F2E7CB4F1B60468A00FD8557 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E7CB4E1B60468A00FD8557 /* AppDelegate.m */; };
+		F2E7CB511B60468A00FD8557 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E7CB501B60468A00FD8557 /* main.m */; };
+		F2E7CB531B60468A00FD8557 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E7CB521B60468A00FD8557 /* Images.xcassets */; };
+		F2E7CB561B60468A00FD8557 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E7CB541B60468A00FD8557 /* MainMenu.xib */; };
+		F2E7CB621B60468A00FD8557 /* BehemothTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E7CB611B60468A00FD8557 /* BehemothTests.m */; };
+		F2E7CB6A1B60478D00FD8557 /* Behemoth.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = F2E7CB491B60468A00FD8557 /* Behemoth.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +39,27 @@
 			remoteGlobalIDString = F2B359A21B3A1E2800E6D097;
 			remoteInfo = Lucifer;
 		};
+		F2E7CB5C1B60468A00FD8557 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2B3599B1B3A1E2800E6D097 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2E7CB481B60468A00FD8557;
+			remoteInfo = Behemoth;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F2E7CB691B6046B200FD8557 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				F2E7CB6A1B60478D00FD8557 /* Behemoth.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F2AF98381B47618C001D89E2 /* SBSystemPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SBSystemPreferences.h; path = External/SBSystemPreferences.h; sourceTree = "<group>"; };
@@ -68,6 +94,16 @@
 		F2B359D41B3AF50400E6D097 /* FJCLuciferController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCLuciferController.m; sourceTree = "<group>"; };
 		F2B359D71B3B271400E6D097 /* FJCPreferencesPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJCPreferencesPanel.h; path = Panels/FJCPreferencesPanel.h; sourceTree = "<group>"; };
 		F2B359D81B3B271400E6D097 /* FJCPreferencesPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FJCPreferencesPanel.m; path = Panels/FJCPreferencesPanel.m; sourceTree = "<group>"; };
+		F2E7CB491B60468A00FD8557 /* Behemoth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Behemoth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E7CB4C1B60468A00FD8557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E7CB4D1B60468A00FD8557 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F2E7CB4E1B60468A00FD8557 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F2E7CB501B60468A00FD8557 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2E7CB521B60468A00FD8557 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F2E7CB551B60468A00FD8557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F2E7CB5B1B60468A00FD8557 /* BehemothTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BehemothTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E7CB601B60468A00FD8557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E7CB611B60468A00FD8557 /* BehemothTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BehemothTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +116,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F2B359B31B3A1E2900E6D097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E7CB461B60468A00FD8557 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E7CB581B60468A00FD8557 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -130,6 +180,8 @@
 				F2B359C61B3A214500E6D097 /* IOKit.framework */,
 				F2B359A51B3A1E2900E6D097 /* Lucifer */,
 				F2B359B91B3A1E2900E6D097 /* LuciferTests */,
+				F2E7CB4A1B60468A00FD8557 /* Behemoth */,
+				F2E7CB5E1B60468A00FD8557 /* BehemothTests */,
 				F2B359A41B3A1E2900E6D097 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,6 +191,8 @@
 			children = (
 				F2B359A31B3A1E2900E6D097 /* Lucifer.app */,
 				F2B359B61B3A1E2900E6D097 /* LuciferTests.xctest */,
+				F2E7CB491B60468A00FD8557 /* Behemoth.app */,
+				F2E7CB5B1B60468A00FD8557 /* BehemothTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,6 +262,44 @@
 			name = Panels;
 			sourceTree = "<group>";
 		};
+		F2E7CB4A1B60468A00FD8557 /* Behemoth */ = {
+			isa = PBXGroup;
+			children = (
+				F2E7CB4D1B60468A00FD8557 /* AppDelegate.h */,
+				F2E7CB4E1B60468A00FD8557 /* AppDelegate.m */,
+				F2E7CB521B60468A00FD8557 /* Images.xcassets */,
+				F2E7CB541B60468A00FD8557 /* MainMenu.xib */,
+				F2E7CB4B1B60468A00FD8557 /* Supporting Files */,
+			);
+			path = Behemoth;
+			sourceTree = "<group>";
+		};
+		F2E7CB4B1B60468A00FD8557 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2E7CB4C1B60468A00FD8557 /* Info.plist */,
+				F2E7CB501B60468A00FD8557 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2E7CB5E1B60468A00FD8557 /* BehemothTests */ = {
+			isa = PBXGroup;
+			children = (
+				F2E7CB611B60468A00FD8557 /* BehemothTests.m */,
+				F2E7CB5F1B60468A00FD8557 /* Supporting Files */,
+			);
+			path = BehemothTests;
+			sourceTree = "<group>";
+		};
+		F2E7CB5F1B60468A00FD8557 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2E7CB601B60468A00FD8557 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +310,7 @@
 				F2B3599F1B3A1E2800E6D097 /* Sources */,
 				F2B359A01B3A1E2800E6D097 /* Frameworks */,
 				F2B359A11B3A1E2800E6D097 /* Resources */,
+				F2E7CB691B6046B200FD8557 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -246,6 +339,41 @@
 			productReference = F2B359B61B3A1E2900E6D097 /* LuciferTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F2E7CB481B60468A00FD8557 /* Behemoth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2E7CB631B60468A00FD8557 /* Build configuration list for PBXNativeTarget "Behemoth" */;
+			buildPhases = (
+				F2E7CB451B60468A00FD8557 /* Sources */,
+				F2E7CB461B60468A00FD8557 /* Frameworks */,
+				F2E7CB471B60468A00FD8557 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Behemoth;
+			productName = Behemoth;
+			productReference = F2E7CB491B60468A00FD8557 /* Behemoth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2E7CB5A1B60468A00FD8557 /* BehemothTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2E7CB661B60468A00FD8557 /* Build configuration list for PBXNativeTarget "BehemothTests" */;
+			buildPhases = (
+				F2E7CB571B60468A00FD8557 /* Sources */,
+				F2E7CB581B60468A00FD8557 /* Frameworks */,
+				F2E7CB591B60468A00FD8557 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2E7CB5D1B60468A00FD8557 /* PBXTargetDependency */,
+			);
+			name = BehemothTests;
+			productName = BehemothTests;
+			productReference = F2E7CB5B1B60468A00FD8557 /* BehemothTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -258,10 +386,22 @@
 				TargetAttributes = {
 					F2B359A21B3A1E2800E6D097 = {
 						CreatedOnToolsVersion = 6.3.2;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					F2B359B51B3A1E2900E6D097 = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = F2B359A21B3A1E2800E6D097;
+					};
+					F2E7CB481B60468A00FD8557 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					F2E7CB5A1B60468A00FD8557 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = F2E7CB481B60468A00FD8557;
 					};
 				};
 			};
@@ -280,6 +420,8 @@
 			targets = (
 				F2B359A21B3A1E2800E6D097 /* Lucifer */,
 				F2B359B51B3A1E2900E6D097 /* LuciferTests */,
+				F2E7CB481B60468A00FD8557 /* Behemoth */,
+				F2E7CB5A1B60468A00FD8557 /* BehemothTests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,6 +438,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F2B359B41B3A1E2900E6D097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E7CB471B60468A00FD8557 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E7CB531B60468A00FD8557 /* Images.xcassets in Resources */,
+				F2E7CB561B60468A00FD8557 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E7CB591B60468A00FD8557 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,6 +489,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2E7CB451B60468A00FD8557 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E7CB511B60468A00FD8557 /* main.m in Sources */,
+				F2E7CB4F1B60468A00FD8557 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E7CB571B60468A00FD8557 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E7CB621B60468A00FD8557 /* BehemothTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -339,6 +514,11 @@
 			target = F2B359A21B3A1E2800E6D097 /* Lucifer */;
 			targetProxy = F2B359B71B3A1E2900E6D097 /* PBXContainerItemProxy */;
 		};
+		F2E7CB5D1B60468A00FD8557 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2E7CB481B60468A00FD8557 /* Behemoth */;
+			targetProxy = F2E7CB5C1B60468A00FD8557 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -346,6 +526,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				F2B359B01B3A1E2900E6D097 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		F2E7CB541B60468A00FD8557 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2E7CB551B60468A00FD8557 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -492,6 +680,70 @@
 			};
 			name = Release;
 		};
+		F2E7CB641B60468A00FD8557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Behemoth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
+		};
+		F2E7CB651B60468A00FD8557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Behemoth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F2E7CB671B60468A00FD8557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BehemothTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Behemoth.app/Contents/MacOS/Behemoth";
+			};
+			name = Debug;
+		};
+		F2E7CB681B60468A00FD8557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BehemothTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Behemoth.app/Contents/MacOS/Behemoth";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -521,6 +773,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F2E7CB631B60468A00FD8557 /* Build configuration list for PBXNativeTarget "Behemoth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E7CB641B60468A00FD8557 /* Debug */,
+				F2E7CB651B60468A00FD8557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F2E7CB661B60468A00FD8557 /* Build configuration list for PBXNativeTarget "BehemothTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E7CB671B60468A00FD8557 /* Debug */,
+				F2E7CB681B60468A00FD8557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -129,7 +129,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <button translatesAutoresizingMaskIntoConstraints="NO" id="n4y-59-Dor">
-                                            <rect key="frame" x="18" y="112" width="177" height="18"/>
+                                            <rect key="frame" x="18" y="120" width="177" height="18"/>
                                             <buttonCell key="cell" type="check" title="Monitor Mouse/Trackpad" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="swR-eL-Tb4">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -139,7 +139,7 @@
                                             </connections>
                                         </button>
                                         <button translatesAutoresizingMaskIntoConstraints="NO" id="lGH-AP-F6f">
-                                            <rect key="frame" x="18" y="142" width="133" height="18"/>
+                                            <rect key="frame" x="18" y="150" width="133" height="18"/>
                                             <buttonCell key="cell" type="check" title="Monitor Keyboard" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="yTe-hN-D72">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -148,18 +148,30 @@
                                                 <action selector="didPressMonitorKeyboardButton:" target="Yug-U3-jWV" id="ZNw-Xl-2ll"/>
                                             </connections>
                                         </button>
+                                        <button translatesAutoresizingMaskIntoConstraints="NO" id="fz1-j9-2El">
+                                            <rect key="frame" x="18" y="90" width="106" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Start at Login" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="5tj-8z-bfy">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="didPressStartAtLoginButton:" target="Yug-U3-jWV" id="ODs-JJ-9Jx"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="cAV-HK-za9" firstAttribute="trailing" secondItem="Na9-BI-sXt" secondAttribute="trailing" constant="12" id="37j-0x-0kO"/>
-                                        <constraint firstItem="lGH-AP-F6f" firstAttribute="top" secondItem="UQc-c8-47P" secondAttribute="top" constant="32" id="8Kp-9y-FyM"/>
+                                        <constraint firstItem="lGH-AP-F6f" firstAttribute="top" secondItem="UQc-c8-47P" secondAttribute="top" constant="24" id="8Kp-9y-FyM"/>
                                         <constraint firstItem="Hv9-6g-7Pd" firstAttribute="leading" secondItem="Na9-BI-sXt" secondAttribute="leading" id="C6R-0V-Zym"/>
                                         <constraint firstItem="n4y-59-Dor" firstAttribute="top" secondItem="lGH-AP-F6f" secondAttribute="bottom" constant="16" id="Cyr-ic-5pS"/>
                                         <constraint firstItem="Na9-BI-sXt" firstAttribute="leading" secondItem="Mah-GO-Qiu" secondAttribute="leading" constant="12" id="J3E-nZ-ATj"/>
+                                        <constraint firstItem="fz1-j9-2El" firstAttribute="leading" secondItem="n4y-59-Dor" secondAttribute="leading" id="QMu-CS-CiQ"/>
                                         <constraint firstItem="Na9-BI-sXt" firstAttribute="top" secondItem="REp-hW-5CC" secondAttribute="bottom" constant="5" id="RGW-9n-dsO"/>
                                         <constraint firstItem="cAV-HK-za9" firstAttribute="top" secondItem="Na9-BI-sXt" secondAttribute="bottom" constant="-3" id="U0r-3Y-I6H"/>
                                         <constraint firstItem="REp-hW-5CC" firstAttribute="trailing" secondItem="Na9-BI-sXt" secondAttribute="trailing" id="Vc9-PP-dSC"/>
                                         <constraint firstItem="Na9-BI-sXt" firstAttribute="top" secondItem="Hv9-6g-7Pd" secondAttribute="bottom" constant="5" id="X4R-mG-YF4"/>
                                         <constraint firstItem="3cp-6E-hnp" firstAttribute="centerX" secondItem="Na9-BI-sXt" secondAttribute="centerX" id="XlQ-hH-1YO"/>
+                                        <constraint firstItem="fz1-j9-2El" firstAttribute="top" secondItem="n4y-59-Dor" secondAttribute="bottom" constant="16" id="Z5e-zl-PgR"/>
                                         <constraint firstAttribute="bottom" secondItem="Na9-BI-sXt" secondAttribute="bottom" constant="22" id="aCI-OC-Die"/>
                                         <constraint firstItem="n4y-59-Dor" firstAttribute="leading" secondItem="lGH-AP-F6f" secondAttribute="leading" id="i2O-9v-EVe"/>
                                         <constraint firstItem="Na9-BI-sXt" firstAttribute="leading" secondItem="UQc-c8-47P" secondAttribute="leading" constant="20" id="ikK-ML-HTq"/>
@@ -413,6 +425,7 @@
                 <outlet property="releaseDateLabel" destination="b6C-U4-1Mg" id="Yyf-SG-of8"/>
                 <outlet property="segmentedControl" destination="lCt-FM-7HH" id="Anu-Ec-MJl"/>
                 <outlet property="selectedTimeLabel" destination="REp-hW-5CC" id="83i-Tt-pzU"/>
+                <outlet property="startAtLoginButton" destination="fz1-j9-2El" id="SSI-KG-Ihb"/>
                 <outlet property="tableView" destination="uKB-ap-hwz" id="rOk-q8-JF4"/>
                 <outlet property="timeoutSlider" destination="Na9-BI-sXt" id="LjY-C5-M9b"/>
                 <outlet property="versionLabel" destination="lNN-dD-kw6" id="vaX-W4-zcA"/>
