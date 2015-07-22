@@ -32,6 +32,7 @@ static NSString *const kAppDidRunBefore = @"kAppDidRunBefore";
 
 @property (nonatomic, strong) NSStatusItem *statusItem;
 
+// Outlets
 @property (weak) IBOutlet NSMenu *menu;
 @property (weak) IBOutlet NSMenuItem *toggleStatusMenuItem;
 

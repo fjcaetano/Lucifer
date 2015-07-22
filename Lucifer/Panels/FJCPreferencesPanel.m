@@ -33,6 +33,10 @@ static NSString *const kKeystroke = @"kKeystroke";
 @property (weak) IBOutlet NSTableView *tableView;
 @property (weak) IBOutlet NSSegmentedControl *segmentedControl;
 
+// About Tab
+@property (weak) IBOutlet NSTextField *versionLabel;
+@property (weak) IBOutlet NSTextField *releaseDateLabel;
+
 @end
 
 
@@ -40,6 +44,7 @@ static NSString *const kKeystroke = @"kKeystroke";
 
 - (void)makeKeyAndOrderFront:(id)sender
 {
+    // General Tab
     FJCLuciferController *lu = [FJCLuciferController sharedController];
     self.monitorMouseButton.state = (lu.monitorType & FJCLuciferMonitorTypeMouse);
     self.monitorKeyboardButton.state = (lu.monitorType & FJCLuciferMonitorTypeKeyboard);
@@ -48,7 +53,17 @@ static NSString *const kKeystroke = @"kKeystroke";
     self.timeoutSlider.integerValue = timeOutInMinutes;
     self.selectedTimeLabel.stringValue = [NSString stringWithFormat:@"%d minutes", timeOutInMinutes];
     
+    
+    // Blacklist Tab
     [self.tableView reloadData];
+    
+    
+    // About Tab
+    NSBundle *bundle = [NSBundle mainBundle];
+    self.releaseDateLabel.stringValue = [bundle objectForInfoDictionaryKey:@"BTBuildDate"];
+    self.versionLabel.stringValue = [NSString stringWithFormat:@"%@ (%@)",
+                                     [bundle objectForInfoDictionaryKey:@"CFBundleShortVersionString"],
+                                     [bundle objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey]];
     
     [NSApp activateIgnoringOtherApps:YES];
     [super makeKeyAndOrderFront:sender];
@@ -144,6 +159,11 @@ static NSString *const kKeystroke = @"kKeystroke";
     }
     
     [self.segmentedControl setEnabled:hasRowsSelected forSegment:1];
+}
+
+- (IBAction)didPressGithubButton:(NSButton *)sender
+{
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/fjcaetano/Lucifer"]];
 }
 
 #pragma mark - Table View
