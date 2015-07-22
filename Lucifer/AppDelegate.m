@@ -91,7 +91,7 @@ static NSString *const kAppDidRunBefore = @"kAppDidRunBefore";
 
 - (IBAction)didPressQuitItem:(NSMenuItem *)sender
 {
-    exit(0);
+    [NSApp terminate:nil];
 }
 
 #pragma mark - Private Methods

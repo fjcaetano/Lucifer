@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F2AF98471B476283001D89E2 /* FMTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AF983E1B476283001D89E2 /* FMTHotKey.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F2AF98491B476283001D89E2 /* FMTLoginItems.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AF98421B476283001D89E2 /* FMTLoginItems.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F2AF984A1B476283001D89E2 /* FMTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AF98441B476283001D89E2 /* FMTUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F2AF984B1B476283001D89E2 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = F2AF98451B476283001D89E2 /* Readme.md */; };
+		F21D97791B6051D9009CFDC5 /* KBLKeyboardBacklightService.c in Sources */ = {isa = PBXBuildFile; fileRef = F21D97751B6051D9009CFDC5 /* KBLKeyboardBacklightService.c */; };
 		F2AF984E1B4762F6001D89E2 /* NSArray+FMTNSArrayFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AF984D1B4762F6001D89E2 /* NSArray+FMTNSArrayFunctional.m */; };
 		F2B350D71B3B6793007F1E41 /* KeyMapping.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2B350D61B3B6793007F1E41 /* KeyMapping.plist */; };
 		F2B359AA1B3A1E2900E6D097 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359A91B3A1E2900E6D097 /* AppDelegate.m */; };
@@ -19,7 +16,6 @@
 		F2B359B11B3A1E2900E6D097 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B359AF1B3A1E2900E6D097 /* MainMenu.xib */; };
 		F2B359BD1B3A1E2900E6D097 /* LuciferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359BC1B3A1E2900E6D097 /* LuciferTests.m */; };
 		F2B359C71B3A214500E6D097 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B359C61B3A214500E6D097 /* IOKit.framework */; };
-		F2B359CD1B3A283900E6D097 /* KBLKeyboardBacklightService.c in Sources */ = {isa = PBXBuildFile; fileRef = F2B359C91B3A283900E6D097 /* KBLKeyboardBacklightService.c */; };
 		F2B359D21B3AED1200E6D097 /* FJCLEDMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359D11B3AED1200E6D097 /* FJCLEDMonitor.m */; };
 		F2B359D51B3AF50400E6D097 /* FJCLuciferController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359D41B3AF50400E6D097 /* FJCLuciferController.m */; };
 		F2B359D91B3B271400E6D097 /* FJCPreferencesPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359D81B3B271400E6D097 /* FJCPreferencesPanel.m */; };
@@ -62,15 +58,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F21D97751B6051D9009CFDC5 /* KBLKeyboardBacklightService.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KBLKeyboardBacklightService.c; sourceTree = "<group>"; };
+		F21D97761B6051D9009CFDC5 /* KBLKeyboardBacklightService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBLKeyboardBacklightService.h; sourceTree = "<group>"; };
 		F2AF98381B47618C001D89E2 /* SBSystemPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SBSystemPreferences.h; path = External/SBSystemPreferences.h; sourceTree = "<group>"; };
-		F2AF983A1B476283001D89E2 /* FMTDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTDefines.h; sourceTree = "<group>"; };
-		F2AF983D1B476283001D89E2 /* FMTHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTHotKey.h; sourceTree = "<group>"; };
-		F2AF983E1B476283001D89E2 /* FMTHotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTHotKey.m; sourceTree = "<group>"; };
-		F2AF98411B476283001D89E2 /* FMTLoginItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTLoginItems.h; sourceTree = "<group>"; };
-		F2AF98421B476283001D89E2 /* FMTLoginItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTLoginItems.m; sourceTree = "<group>"; };
-		F2AF98431B476283001D89E2 /* FMTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTUtils.h; sourceTree = "<group>"; };
-		F2AF98441B476283001D89E2 /* FMTUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTUtils.m; sourceTree = "<group>"; };
-		F2AF98451B476283001D89E2 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		F2AF984C1B4762F6001D89E2 /* NSArray+FMTNSArrayFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+FMTNSArrayFunctional.h"; path = "External/NSArray+FMTNSArrayFunctional.h"; sourceTree = "<group>"; };
 		F2AF984D1B4762F6001D89E2 /* NSArray+FMTNSArrayFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+FMTNSArrayFunctional.m"; path = "External/NSArray+FMTNSArrayFunctional.m"; sourceTree = "<group>"; };
 		F2B350D61B3B6793007F1E41 /* KeyMapping.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = KeyMapping.plist; path = Resources/KeyMapping.plist; sourceTree = "<group>"; };
@@ -86,8 +76,6 @@
 		F2B359BB1B3A1E2900E6D097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B359BC1B3A1E2900E6D097 /* LuciferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LuciferTests.m; sourceTree = "<group>"; };
 		F2B359C61B3A214500E6D097 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		F2B359C91B3A283900E6D097 /* KBLKeyboardBacklightService.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KBLKeyboardBacklightService.c; sourceTree = "<group>"; };
-		F2B359CA1B3A283900E6D097 /* KBLKeyboardBacklightService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBLKeyboardBacklightService.h; sourceTree = "<group>"; };
 		F2B359D01B3AED1200E6D097 /* FJCLEDMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCLEDMonitor.h; sourceTree = "<group>"; };
 		F2B359D11B3AED1200E6D097 /* FJCLEDMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCLEDMonitor.m; sourceTree = "<group>"; };
 		F2B359D31B3AF50400E6D097 /* FJCLuciferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCLuciferController.h; sourceTree = "<group>"; };
@@ -139,31 +127,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F21D97741B6051D9009CFDC5 /* WizardKeys */ = {
+			isa = PBXGroup;
+			children = (
+				F21D97751B6051D9009CFDC5 /* KBLKeyboardBacklightService.c */,
+				F21D97761B6051D9009CFDC5 /* KBLKeyboardBacklightService.h */,
+			);
+			name = WizardKeys;
+			path = External/WizardKeys;
+			sourceTree = "<group>";
+		};
 		F2AF98371B47616C001D89E2 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				F2AF98391B476283001D89E2 /* FMT */,
+				F21D97741B6051D9009CFDC5 /* WizardKeys */,
 				F2AF98381B47618C001D89E2 /* SBSystemPreferences.h */,
 				F2AF984C1B4762F6001D89E2 /* NSArray+FMTNSArrayFunctional.h */,
 				F2AF984D1B4762F6001D89E2 /* NSArray+FMTNSArrayFunctional.m */,
 			);
 			name = External;
-			sourceTree = "<group>";
-		};
-		F2AF98391B476283001D89E2 /* FMT */ = {
-			isa = PBXGroup;
-			children = (
-				F2AF983A1B476283001D89E2 /* FMTDefines.h */,
-				F2AF983D1B476283001D89E2 /* FMTHotKey.h */,
-				F2AF983E1B476283001D89E2 /* FMTHotKey.m */,
-				F2AF98411B476283001D89E2 /* FMTLoginItems.h */,
-				F2AF98421B476283001D89E2 /* FMTLoginItems.m */,
-				F2AF98431B476283001D89E2 /* FMTUtils.h */,
-				F2AF98441B476283001D89E2 /* FMTUtils.m */,
-				F2AF98451B476283001D89E2 /* Readme.md */,
-			);
-			name = FMT;
-			path = External/FMT;
 			sourceTree = "<group>";
 		};
 		F2B350D51B3B6774007F1E41 /* Resources */ = {
@@ -202,7 +184,6 @@
 			children = (
 				F2AF98371B47616C001D89E2 /* External */,
 				F2B359D61B3B26FE00E6D097 /* Panels */,
-				F2B359C81B3A283900E6D097 /* WizardKeys */,
 				F2B359A81B3A1E2900E6D097 /* AppDelegate.h */,
 				F2B359A91B3A1E2900E6D097 /* AppDelegate.m */,
 				F2B359AD1B3A1E2900E6D097 /* Images.xcassets */,
@@ -243,15 +224,6 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
-		};
-		F2B359C81B3A283900E6D097 /* WizardKeys */ = {
-			isa = PBXGroup;
-			children = (
-				F2B359C91B3A283900E6D097 /* KBLKeyboardBacklightService.c */,
-				F2B359CA1B3A283900E6D097 /* KBLKeyboardBacklightService.h */,
-			);
-			path = WizardKeys;
-			sourceTree = SOURCE_ROOT;
 		};
 		F2B359D61B3B26FE00E6D097 /* Panels */ = {
 			isa = PBXGroup;
@@ -467,12 +439,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2AF984B1B476283001D89E2 /* Readme.md in Sources */,
+				F21D97791B6051D9009CFDC5 /* KBLKeyboardBacklightService.c in Sources */,
 				F2AF984E1B4762F6001D89E2 /* NSArray+FMTNSArrayFunctional.m in Sources */,
-				F2AF98491B476283001D89E2 /* FMTLoginItems.m in Sources */,
-				F2AF98471B476283001D89E2 /* FMTHotKey.m in Sources */,
-				F2AF984A1B476283001D89E2 /* FMTUtils.m in Sources */,
-				F2B359CD1B3A283900E6D097 /* KBLKeyboardBacklightService.c in Sources */,
 				F2B359AC1B3A1E2900E6D097 /* main.m in Sources */,
 				F2B359D21B3AED1200E6D097 /* FJCLEDMonitor.m in Sources */,
 				F2B359D91B3B271400E6D097 /* FJCPreferencesPanel.m in Sources */,
@@ -781,6 +749,7 @@
 				F2E7CB651B60468A00FD8557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2E7CB661B60468A00FD8557 /* Build configuration list for PBXNativeTarget "BehemothTests" */ = {
 			isa = XCConfigurationList;
@@ -789,6 +758,7 @@
 				F2E7CB681B60468A00FD8557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
