@@ -37,7 +37,7 @@
 	<key>SUEnableAutomaticChecks</key>
 	<false/>
 	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/fjcaetano/Lucifer/master/appcast.xml</string>
+	<string>https://raw.githubusercontent.com/fjcaetano/Lucifer/master/Lucifer/appcast.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 	<key>SUScheduledCheckInterval</key>
