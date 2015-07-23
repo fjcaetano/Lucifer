@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F8CB537C8A634B6BF9CDF92 /* libPods-Lucifer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 941A77A56112546E08937CA3 /* libPods-Lucifer.a */; };
 		F21D97791B6051D9009CFDC5 /* KBLKeyboardBacklightService.c in Sources */ = {isa = PBXBuildFile; fileRef = F21D97751B6051D9009CFDC5 /* KBLKeyboardBacklightService.c */; };
+		F238F26C1B605EC9005D330E /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F238F26B1B605EC9005D330E /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F238F26E1B606133005D330E /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = F238F26D1B606133005D330E /* dsa_pub.pem */; };
+		F238F2701B606268005D330E /* appcast.xml in Resources */ = {isa = PBXBuildFile; fileRef = F238F26F1B606268005D330E /* appcast.xml */; };
 		F2AF984E1B4762F6001D89E2 /* NSArray+FMTNSArrayFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AF984D1B4762F6001D89E2 /* NSArray+FMTNSArrayFunctional.m */; };
 		F2B350D71B3B6793007F1E41 /* KeyMapping.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2B350D61B3B6793007F1E41 /* KeyMapping.plist */; };
 		F2B359AA1B3A1E2900E6D097 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B359A91B3A1E2900E6D097 /* AppDelegate.m */; };
@@ -45,6 +49,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F238F26A1B605EA0005D330E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F238F26C1B605EC9005D330E /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F2E7CB691B6046B200FD8557 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,8 +72,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1EEAC1A5CFDBEE6EE702B30B /* Pods-Lucifer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lucifer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lucifer/Pods-Lucifer.release.xcconfig"; sourceTree = "<group>"; };
+		941A77A56112546E08937CA3 /* libPods-Lucifer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lucifer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1ADFDCB01B057F78212E31D /* Pods-Lucifer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lucifer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lucifer/Pods-Lucifer.debug.xcconfig"; sourceTree = "<group>"; };
 		F21D97751B6051D9009CFDC5 /* KBLKeyboardBacklightService.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KBLKeyboardBacklightService.c; sourceTree = "<group>"; };
 		F21D97761B6051D9009CFDC5 /* KBLKeyboardBacklightService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBLKeyboardBacklightService.h; sourceTree = "<group>"; };
+		F238F26B1B605EC9005D330E /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Pods/Sparkle/Sparkle.framework; sourceTree = "<group>"; };
+		F238F26D1B606133005D330E /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		F238F26F1B606268005D330E /* appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appcast.xml; sourceTree = "<group>"; };
 		F2AF98381B47618C001D89E2 /* SBSystemPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SBSystemPreferences.h; path = External/SBSystemPreferences.h; sourceTree = "<group>"; };
 		F2AF984C1B4762F6001D89E2 /* NSArray+FMTNSArrayFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+FMTNSArrayFunctional.h"; path = "External/NSArray+FMTNSArrayFunctional.h"; sourceTree = "<group>"; };
 		F2AF984D1B4762F6001D89E2 /* NSArray+FMTNSArrayFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+FMTNSArrayFunctional.m"; path = "External/NSArray+FMTNSArrayFunctional.m"; sourceTree = "<group>"; };
@@ -100,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B359C71B3A214500E6D097 /* IOKit.framework in Frameworks */,
+				5F8CB537C8A634B6BF9CDF92 /* libPods-Lucifer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +148,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CAF733272AC6DA2AD9010AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				941A77A56112546E08937CA3 /* libPods-Lucifer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D6FCAE74E3F939C4BB3FB60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1ADFDCB01B057F78212E31D /* Pods-Lucifer.debug.xcconfig */,
+				1EEAC1A5CFDBEE6EE702B30B /* Pods-Lucifer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F21D97741B6051D9009CFDC5 /* WizardKeys */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +189,8 @@
 		F2B350D51B3B6774007F1E41 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F238F26F1B606268005D330E /* appcast.xml */,
+				F238F26D1B606133005D330E /* dsa_pub.pem */,
 				F2B350D61B3B6793007F1E41 /* KeyMapping.plist */,
 			);
 			name = Resources;
@@ -159,12 +199,15 @@
 		F2B3599A1B3A1E2800E6D097 = {
 			isa = PBXGroup;
 			children = (
+				F238F26B1B605EC9005D330E /* Sparkle.framework */,
 				F2B359C61B3A214500E6D097 /* IOKit.framework */,
 				F2B359A51B3A1E2900E6D097 /* Lucifer */,
 				F2B359B91B3A1E2900E6D097 /* LuciferTests */,
 				F2E7CB4A1B60468A00FD8557 /* Behemoth */,
 				F2E7CB5E1B60468A00FD8557 /* BehemothTests */,
 				F2B359A41B3A1E2900E6D097 /* Products */,
+				2D6FCAE74E3F939C4BB3FB60 /* Pods */,
+				2CAF733272AC6DA2AD9010AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -279,11 +322,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2B359C01B3A1E2900E6D097 /* Build configuration list for PBXNativeTarget "Lucifer" */;
 			buildPhases = (
+				A22813C22630BFEF2117A800 /* Check Pods Manifest.lock */,
 				F2B3599F1B3A1E2800E6D097 /* Sources */,
 				F2B359A01B3A1E2800E6D097 /* Frameworks */,
 				F2B359A11B3A1E2800E6D097 /* Resources */,
 				F2E7CB691B6046B200FD8557 /* CopyFiles */,
 				F21D977C1B6052B8009CFDC5 /* Version Bumper */,
+				62F079DBA609A6E84FB3915D /* Copy Pods Resources */,
+				F238F26A1B605EA0005D330E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -405,8 +451,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B359AE1B3A1E2900E6D097 /* Images.xcassets in Resources */,
+				F238F26E1B606133005D330E /* dsa_pub.pem in Resources */,
 				F2B350D71B3B6793007F1E41 /* KeyMapping.plist in Resources */,
 				F2B359B11B3A1E2900E6D097 /* MainMenu.xib in Resources */,
+				F238F2701B606268005D330E /* appcast.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +484,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		62F079DBA609A6E84FB3915D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lucifer/Pods-Lucifer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A22813C22630BFEF2117A800 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		F21D977C1B6052B8009CFDC5 /* Version Bumper */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -608,24 +686,42 @@
 		};
 		F2B359C11B3A1E2900E6D097 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1ADFDCB01B057F78212E31D /* Pods-Lucifer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = Lucifer/PrefixHeader.pch;
 				INFOPLIST_FILE = Lucifer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"Sparkle\"",
+					"-Wl,-rpath,@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		F2B359C21B3A1E2900E6D097 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EEAC1A5CFDBEE6EE702B30B /* Pods-Lucifer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = Lucifer/PrefixHeader.pch;
 				INFOPLIST_FILE = Lucifer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"Sparkle\"",
+					"-Wl,-rpath,@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

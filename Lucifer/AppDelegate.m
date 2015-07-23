@@ -43,8 +43,6 @@ static NSString *const kAppDidRunBefore = @"kAppDidRunBefore";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    //    [[NSWorkspace sharedWorkspace] openFile:@"/System/Library/PreferencePanes/Keyboard.prefPane"];
-    
     [self _checkSystemAuthorization];
     [self _showAlertIfFirstTimeOpeningTheApp];
     

@@ -18,7 +18,7 @@
                 <outlet property="toggleStatusMenuItem" destination="ZA4-xo-mzl" id="ApY-rl-Fup"/>
             </connections>
         </customObject>
-        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="YLy-65-1bz" customClass="SUUpdater"/>
         <menu id="tEp-9i-joJ">
             <items>
                 <menuItem title="Disable" keyEquivalent="l" id="ZA4-xo-mzl">
@@ -129,7 +129,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <button translatesAutoresizingMaskIntoConstraints="NO" id="n4y-59-Dor">
-                                            <rect key="frame" x="18" y="120" width="177" height="18"/>
+                                            <rect key="frame" x="18" y="132" width="177" height="18"/>
                                             <buttonCell key="cell" type="check" title="Monitor Mouse/Trackpad" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="swR-eL-Tb4">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -139,7 +139,7 @@
                                             </connections>
                                         </button>
                                         <button translatesAutoresizingMaskIntoConstraints="NO" id="lGH-AP-F6f">
-                                            <rect key="frame" x="18" y="150" width="133" height="18"/>
+                                            <rect key="frame" x="18" y="158" width="133" height="18"/>
                                             <buttonCell key="cell" type="check" title="Monitor Keyboard" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="yTe-hN-D72">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -149,7 +149,7 @@
                                             </connections>
                                         </button>
                                         <button translatesAutoresizingMaskIntoConstraints="NO" id="fz1-j9-2El">
-                                            <rect key="frame" x="18" y="90" width="106" height="18"/>
+                                            <rect key="frame" x="18" y="106" width="106" height="18"/>
                                             <buttonCell key="cell" type="check" title="Start at Login" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="5tj-8z-bfy">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -158,20 +158,32 @@
                                                 <action selector="didPressStartAtLoginButton:" target="Yug-U3-jWV" id="ODs-JJ-9Jx"/>
                                             </connections>
                                         </button>
+                                        <button translatesAutoresizingMaskIntoConstraints="NO" id="mbV-m4-JLf">
+                                            <rect key="frame" x="18" y="80" width="221" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Automatically check for updates" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Red-WW-fm7">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <binding destination="YLy-65-1bz" name="value" keyPath="automaticallyChecksForUpdates" id="LKd-1P-s4o"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="mbV-m4-JLf" firstAttribute="top" secondItem="fz1-j9-2El" secondAttribute="bottom" constant="12" id="0x1-mL-a20"/>
                                         <constraint firstItem="cAV-HK-za9" firstAttribute="trailing" secondItem="Na9-BI-sXt" secondAttribute="trailing" constant="12" id="37j-0x-0kO"/>
-                                        <constraint firstItem="lGH-AP-F6f" firstAttribute="top" secondItem="UQc-c8-47P" secondAttribute="top" constant="24" id="8Kp-9y-FyM"/>
+                                        <constraint firstItem="lGH-AP-F6f" firstAttribute="top" secondItem="UQc-c8-47P" secondAttribute="top" constant="16" id="8Kp-9y-FyM"/>
                                         <constraint firstItem="Hv9-6g-7Pd" firstAttribute="leading" secondItem="Na9-BI-sXt" secondAttribute="leading" id="C6R-0V-Zym"/>
-                                        <constraint firstItem="n4y-59-Dor" firstAttribute="top" secondItem="lGH-AP-F6f" secondAttribute="bottom" constant="16" id="Cyr-ic-5pS"/>
+                                        <constraint firstItem="n4y-59-Dor" firstAttribute="top" secondItem="lGH-AP-F6f" secondAttribute="bottom" constant="12" id="Cyr-ic-5pS"/>
                                         <constraint firstItem="Na9-BI-sXt" firstAttribute="leading" secondItem="Mah-GO-Qiu" secondAttribute="leading" constant="12" id="J3E-nZ-ATj"/>
+                                        <constraint firstItem="fz1-j9-2El" firstAttribute="leading" secondItem="mbV-m4-JLf" secondAttribute="leading" id="Maa-B8-HYy"/>
                                         <constraint firstItem="fz1-j9-2El" firstAttribute="leading" secondItem="n4y-59-Dor" secondAttribute="leading" id="QMu-CS-CiQ"/>
                                         <constraint firstItem="Na9-BI-sXt" firstAttribute="top" secondItem="REp-hW-5CC" secondAttribute="bottom" constant="5" id="RGW-9n-dsO"/>
                                         <constraint firstItem="cAV-HK-za9" firstAttribute="top" secondItem="Na9-BI-sXt" secondAttribute="bottom" constant="-3" id="U0r-3Y-I6H"/>
                                         <constraint firstItem="REp-hW-5CC" firstAttribute="trailing" secondItem="Na9-BI-sXt" secondAttribute="trailing" id="Vc9-PP-dSC"/>
                                         <constraint firstItem="Na9-BI-sXt" firstAttribute="top" secondItem="Hv9-6g-7Pd" secondAttribute="bottom" constant="5" id="X4R-mG-YF4"/>
                                         <constraint firstItem="3cp-6E-hnp" firstAttribute="centerX" secondItem="Na9-BI-sXt" secondAttribute="centerX" id="XlQ-hH-1YO"/>
-                                        <constraint firstItem="fz1-j9-2El" firstAttribute="top" secondItem="n4y-59-Dor" secondAttribute="bottom" constant="16" id="Z5e-zl-PgR"/>
+                                        <constraint firstItem="fz1-j9-2El" firstAttribute="top" secondItem="n4y-59-Dor" secondAttribute="bottom" constant="12" id="Z5e-zl-PgR"/>
                                         <constraint firstAttribute="bottom" secondItem="Na9-BI-sXt" secondAttribute="bottom" constant="22" id="aCI-OC-Die"/>
                                         <constraint firstItem="n4y-59-Dor" firstAttribute="leading" secondItem="lGH-AP-F6f" secondAttribute="leading" id="i2O-9v-EVe"/>
                                         <constraint firstItem="Na9-BI-sXt" firstAttribute="leading" secondItem="UQc-c8-47P" secondAttribute="leading" constant="20" id="ikK-ML-HTq"/>
@@ -362,12 +374,15 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IrJ-9w-tIo">
-                                            <rect key="frame" x="215" y="147" width="156" height="32"/>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IrJ-9w-tIo">
+                                            <rect key="frame" x="215" y="146" width="156" height="32"/>
                                             <buttonCell key="cell" type="push" title="Check for Updates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tCd-pe-UQ3">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="checkForUpdates:" target="YLy-65-1bz" id="c0t-go-Ow4"/>
+                                            </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Iiv-cG-15i">
                                             <rect key="frame" x="10" y="9" width="155" height="32"/>
@@ -432,6 +447,7 @@
             </connections>
             <point key="canvasLocation" x="-1736.5" y="-2161"/>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="N6f-T8-1s7"/>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
